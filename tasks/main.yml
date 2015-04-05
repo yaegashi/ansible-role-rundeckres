@@ -1,0 +1,15 @@
+- file:
+    path: "{{facts_dir}}"
+    state: directory
+  delegate_to: localhost
+  sudo: no
+  run_once: yes
+- template:
+    src: facts.j2
+    dest: "{{facts_dir}}/{{inventory_hostname}}.json"
+  delegate_to: localhost
+  sudo: no
+- script: rundeckres.py {{facts_dir}} >{{rundeckres_path}}
+  delegate_to: localhost
+  sudo: no
+  run_once: yes

@@ -1,0 +1,4 @@
+---
+facts_dir: "{{inventory_dir}}/facts"
+rundeckres_path: "{{inventory_dir}}/rundeckres.json"
+rundeckres_username: "{{ansible_user_id}}"

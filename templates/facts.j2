@@ -1,0 +1,3 @@
+{% set x = {'rundeckres_username': rundeckres_username} %}
+{% set y = x.update(hostvars[inventory_hostname]) %}
+{{ x | to_json | safe }}
