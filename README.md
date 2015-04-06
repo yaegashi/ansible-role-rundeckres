@@ -10,6 +10,9 @@ It can generate tags for each node from groups defined in Ansible inventory,
 as well as other useful attributes such as osArch, osName, etc.
 from each host's facts gathered by Ansible.
 
+Ansible Galaxy Page:
+[https://galaxy.ansible.com/list#/roles/3327](https://galaxy.ansible.com/list#/roles/3327)
+
 Requirements
 ------------
 
