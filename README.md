@@ -7,8 +7,8 @@ This role helps you to generate
 from Ansible inventory and facts.
 
 It can generate tags for each node from groups defined in Ansible inventory,
-as well as other useful attributes such as osArch, osName, etc.
-from each host's facts gathered by Ansible.
+as well as other useful attributes including
+osArch, osName, ansibleDistribution, etc. from facts gathered by Ansible.
 
 Ansible Galaxy Page:
 [https://galaxy.ansible.com/list#/roles/3327](https://galaxy.ansible.com/list#/roles/3327)
@@ -69,24 +69,34 @@ $ cat rundeckres.json
 [
   {
     "username": "rundecker", 
-    "osArch": "x86_64", 
-    "osFamily": "Linux", 
-    "osVersion": "14.04", 
+    "osFamily": "unix", 
     "nodename": "host-b", 
     "tags": "db,servers", 
     "hostname": "intense", 
-    "osName": "Ubuntu", 
+    "osName": "Linux", 
+    "osArch": "amd64", 
+    "ansibleOsFamily": "Debian", 
+    "ansibleDistributionRelease": "trusty", 
+    "ansibleDistributionMajorVersion": "14", 
+    "ansibleDistribution": "Ubuntu", 
+    "osVersion": "3.13.0-39-generic", 
+    "ansibleDistributionVersion": "14.04", 
     "description": "Ubuntu 14.04.2 LTS"
   }, 
   {
     "username": "rundecker", 
-    "osArch": "x86_64", 
-    "osFamily": "Linux", 
-    "osVersion": "7.8", 
+    "osFamily": "unix", 
     "nodename": "host-a", 
     "tags": "servers,web", 
     "hostname": "kvz02", 
-    "osName": "Debian", 
+    "osName": "Linux", 
+    "osArch": "amd64", 
+    "ansibleOsFamily": "Debian", 
+    "ansibleDistributionRelease": "wheezy", 
+    "ansibleDistributionMajorVersion": "7", 
+    "ansibleDistribution": "Debian", 
+    "osVersion": "2.6.32-openvz-042stab094.6-amd64", 
+    "ansibleDistributionVersion": "7.8", 
     "description": "Debian 7.8"
   }
 ]
