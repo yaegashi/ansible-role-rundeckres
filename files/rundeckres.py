@@ -57,7 +57,7 @@ for i in os.listdir(factsdir):
                 'ansibleDistributionMajorVersion': a_distribution_major_version,
                 'ansibleDistributionRelease': a_distribution_release,
             }
-            c = {k: v for k, v in b.items() if v.strip() != ''}
+            c = dict([(k, v) for k, v in b.items() if v.strip()])
             a.append(c)
         except Exception as x:
             b = {
