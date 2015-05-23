@@ -1,0 +1,13 @@
+[web]
+host-a ansible_ssh_host=kvz02
+
+[db]
+host-b ansible_ssh_host=intense
+
+[scm]
+rundeck
+
+[servers:children]
+web
+db
+scm

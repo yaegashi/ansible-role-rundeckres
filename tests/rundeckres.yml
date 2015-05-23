@@ -1,0 +1,13 @@
+---
+# Gather facts from all hosts, then generate rundeckres.json in inventory_dir.
+- hosts: all
+  roles:
+  - role: yaegashi.rundeckres
+    rundeckres_username: rundecker
+# Install rundeckres.json into the rundeck project.
+- hosts: rundeck
+  sudo: yes
+  tasks:
+  - copy:
+      src: "{{inventory_dir}}/rundeckres.json"
+      dest: "/var/rundeck/projects/foobar/etc/rundeckres.json"
